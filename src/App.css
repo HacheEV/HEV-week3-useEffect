@@ -1,0 +1,144 @@
+.App {
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.title {
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: 7%;
+}
+.searchBar {
+  width: 450px;
+  height: 25px;
+  border-radius: 25px;
+  margin-right: auto;
+  margin-left: 5%;
+}
+.TaskCounter {
+  width: 480px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  background: rgb(0, 255, 153);
+  margin: 20px;
+  padding: 5px;
+}
+.TaskList {
+  width: 300px;
+  margin: 20px;
+  font-family: Arial;
+  line-height: 10px;
+}
+.noTareas {
+  width: 480px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  background: rgb(91, 183, 235);
+  margin: 20px;
+  padding: 5px;
+}
+
+.Task {
+  width: 475px;
+  height: 20px;
+  margin: 10px;
+  margin-right: auto;
+  margin-left: 1%;
+  padding: 5px;
+  box-shadow: 6px 5px 21px 2px rgba(0, 0, 0, 0.84);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.textTask {
+  width: 150px;
+}
+
+input[type="checkbox"]:checked + span.textTask {
+  text-decoration: line-through;
+}
+
+.newToDo {
+  width: 450px;
+  height: 25px;
+  border-radius: 25px;
+  margin-right: auto;
+  margin-left: 5%;
+}
+
+.tasksDone {
+  width: 480px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  background: rgb(190, 226, 246);
+  margin: 20px;
+  padding: 5px;
+}
+.OverWork {
+  width: 480px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  background: rgb(91, 183, 235);
+  margin: 20px;
+  padding: 5px;
+}
+
+.Avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 2500px;
+  text-align: right;
+}
+.pagesFooter {
+  display: block;
+  margin: 2px;
+  padding: 2px;
+}
+.pages{
+  display: flex;
+  justify-content: space-between;
+}
+.seeingPage{
+  font-size: 20px;
+}
+.buttonClean{
+  width: 490px;
+  height: 50px;
+  margin: 5px;
+  background-color:rgb(91, 183, 235);
+	border-radius:15px;
+	border:1px solid #c1cdd8;
+	display:inline-block;
+	cursor:pointer;
+	color:#f3f7fa;
+	font-family:Arial;
+	font-size:17px;
+}
+.button{
+  	
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #0c61b1;
+	display:inline-block;
+	cursor:pointer;
+	color:#2293d4;
+	font-family:Arial;
+	font-size:17px;
+	
+}
+.button:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
