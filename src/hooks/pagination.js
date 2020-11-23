@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState}from "react";
 import data from "../tasks.json";
 
 const lastId = tasks => Math.max(...tasks.map(task => task.id));
@@ -13,6 +13,7 @@ export const usePagination = () => {
   const filteredTasks = totaltasks.filter((task) =>
     task.title.toLowerCase().includes(search.toLowerCase())
   );
+  const [taskLeft, setTaskLeft] = useState('');
   const filterPageTasks = filteredTasks.slice(
     page * PageSize,
     (page + 1) * PageSize
@@ -37,6 +38,12 @@ export const usePagination = () => {
     const finalTask = totaltasks.filter(task => task.id !== id);
     setTotalTasks(finalTask);
   }
+  useEffect(() => {
+    const leftTasks = totaltasks.filter(x=> !x.done).length;
+    setTaskLeft(leftTasks);
+    document.title = `${taskLeft} tasks left`;
+
+  },[totaltasks.filter(x=> !x.done)]);
  
   return {
     search: {
