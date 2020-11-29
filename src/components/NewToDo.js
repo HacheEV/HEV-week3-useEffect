@@ -6,7 +6,7 @@ function NewToDo({tasks}) {
       <input className="newToDo" placeholder="Type a new task to add" onKeyPress={e => {
         if(e.code === 'Enter'){
           tasks.addTask(e.target.value);
-          
+                    
         }
       }}/>
     

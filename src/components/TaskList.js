@@ -7,8 +7,8 @@ const TaskList = ({tasks}) => {
   }
   return (
     <div className="TaskList">
-      {tasks.filterPageTasks.map(({id, title, done}) => (
-        <Task key={id} tasks={tasks} done={done} title={title} id={id} />
+      {tasks.filterPageTasks.map(({id, title, completed}) => (
+        <Task key={id} tasks={tasks} completed={completed} title={title} id={id} />
       ))}
     </div>
   );

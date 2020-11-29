@@ -4,7 +4,7 @@ import React from "react";
 const TaskCounter = ({tasks}) => {
   
   let totalTask = tasks.taskList.length+1;
-  const notDone = tasks.taskList.filter(task => !task.done).length;
+  const notDone = tasks.taskList.filter(task => !task.completed).length;
   
 
   if(totalTask-1 === notDone){

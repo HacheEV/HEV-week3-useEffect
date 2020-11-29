@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Task = ({tasks, title, done, id}) => {
+const Task = ({tasks, title, completed, id}) => {
   const doCheck = () =>{
    tasks.checkTask(id);
   }
@@ -12,8 +12,8 @@ const Task = ({tasks, title, done, id}) => {
 
   return (
     <div className="Task">
-      <div>
-        <input classname="Tasksitem" type="checkbox" checked={done} onClick={doCheck}/>
+      <div className="textContainer">
+        <input classname="Tasksitem" type="checkbox" checked={completed} onClick={doCheck}/>
         <span className="textTask">{title} </span>
       </div>
       <div>

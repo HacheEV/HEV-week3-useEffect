@@ -5,12 +5,13 @@ import TaskCounter from "./components/TaskCounter";
 import NewToDo from "./components/NewToDo";
 import OverWork from "./components/OverWork";
 import Footer from "./components/Footer";
-import { usePagination } from "./hooks/pagination";
+import { useTasks } from "./hooks/usetasks";
+import NewTasks from "./components/newJasonTasks";
 
 function App() {
-  <usePagination />;
+  <useTasks />;
 
-  const { tasks, pagination, search } = usePagination();
+  const { tasks, pagination, search } = useTasks();
 
   return (
     <div className="App">
@@ -26,11 +27,13 @@ function App() {
           if (e.code === "Enter") {
             search.setSearch(e.target.value);
             pagination.reset();
+            
+                        
           }
         }}
       />
       
-
+      <NewTasks tasks={tasks}/>  
       <TaskCounter tasks={tasks} />
       <OverWork tasks={tasks} />
 

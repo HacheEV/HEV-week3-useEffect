@@ -1,12 +1,13 @@
 import React from "react";
-import data from "../tasks.json";
 
-const OverWork = (props) => {
-  const notDone = data.tasks.filter((task) => !task.done).length;
+
+
+const OverWork = ({tasks}) => {
+  const notDone = tasks.taskList.filter((task) => !task.completed).length;
   const muchWork = 5;
 
   if (notDone > muchWork) {
-    return <div className="OverWork">Cuidado! Tienes mucho trabajo!</div>;
+    return <div className="OverWork">Warning! You have too much work!</div>;
   }
   return null;
 };
