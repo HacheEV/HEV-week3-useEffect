@@ -1,4 +1,7 @@
 import React from "react";
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClone, faCoffee, faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 
 const Task = ({tasks, title, completed, id}) => {
@@ -18,10 +21,10 @@ const Task = ({tasks, title, completed, id}) => {
       </div>
       <div>
         <span >
-          <button className="button" onClick={() => tasks.addTask("Copy of "+ title)}>Clone</button>
+          <button className="button" onClick={() => tasks.addTask("Copy of "+ title)}><FontAwesomeIcon icon={faClone}/></button>
         </span>
         <span >
-          <button className="button" onClick={clickDelete}>Delete</button>
+          <button className="button" onClick={clickDelete}><FontAwesomeIcon icon={faWindowClose}/></button>
         </span>
       </div>
     </div>

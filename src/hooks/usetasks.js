@@ -41,11 +41,10 @@ export const useTasks = () => {
     setTotalTasks(finalTask);
   }
   useEffect(() => {
-    const leftTasks = totaltasks.filter(x=> !x.completed).length;
-    setTaskLeft(leftTasks);
-    document.title = `${taskLeft} tasks left`;
+  
+    document.title = `${notDone.length} tasks left`;
 
-  },[notDone]);
+  },[notDone.length]);
 
   async function RequestTasks(url){
     const response = await fetch(url);
